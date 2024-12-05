@@ -62,7 +62,7 @@ class _FullscreenInheritedWidgetPopScopeState
   @override
   Widget build(BuildContext context) {
     return PopScope(
-      onPopInvokedWithResult: (_, __) {
+      onPopInvoked: (didPop) {
         // Make sure to exit native fullscreen when this route is popped from the navigator.
         onExitFullscreen(context)?.call();
       },
